@@ -55,4 +55,16 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+    // ktor dependencies
+    implementation("io.ktor:ktor-client-core:3.4.3")
+    implementation("io.ktor:ktor-client-cio:3.4.3")
+
+    // content negotiation -> decide karta ha konsa serialization use hoga
+    implementation("io.ktor:ktor-client-content-negotiation:3.4.3")
+    // serialization -> helps to convert object to Json and vice versa
+    implementation("io.ktor:ktor-serialization-kotlinx-json:3.4.3")
+    // logging
+    implementation("io.ktor:ktor-client-logging:3.4.3")
+
 }
