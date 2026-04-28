@@ -4,11 +4,10 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class ForecastItem(
     val clouds: Clouds,
-    val dt: Int,
+    val dt: Long,
     val dt_txt: String,
     val main: Main,
     val pop: Double,
-    val rain: Rain,
     val sys: Sys,
     val visibility: Int,
     val weather: List<Weather>,

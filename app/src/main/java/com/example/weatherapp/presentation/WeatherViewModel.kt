@@ -1,6 +1,5 @@
 package com.example.weatherapp.presentation
 
-import androidx.compose.runtime.State
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.weatherapp.repository.WeatherRepository
@@ -17,6 +16,10 @@ class WeatherViewModel(private val repository: WeatherRepository = WeatherReposi
 
     private val _searchQuery = MutableStateFlow("Delhi")
     val searchQuery = _searchQuery.asStateFlow()
+
+    init {
+        loadWeather("Delhi")
+    }
 
 
     fun loadWeather(city: String) {
@@ -67,6 +70,5 @@ class WeatherViewModel(private val repository: WeatherRepository = WeatherReposi
         super.onCleared()
         repository.close()
     }
-
 
 }

@@ -1,6 +1,9 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    kotlin("plugin.serialization") version "2.3.21"
 }
 
 android {
@@ -66,5 +69,7 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:3.4.3")
     // logging
     implementation("io.ktor:ktor-client-logging:3.4.3")
+
+    implementation( "androidx.compose.material:material-icons-extended")
 
 }
