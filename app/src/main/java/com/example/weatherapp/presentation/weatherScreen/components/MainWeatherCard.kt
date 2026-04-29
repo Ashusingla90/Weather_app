@@ -63,13 +63,13 @@ fun MainWeatherCard(weather: WeatherModel) {
 fun getWeatherEmoji(condition: String): String {
 
     return when (condition.lowercase()) {
-        "clear" -> " ☀️"
-        "clouds" -> " ☁️ "
-        "rain" -> " 🌧️"
-        "drizzle" -> " 🌦️"
-        "thunderstorm" -> " ⛈️ "
-        "snow" -> " 🌨️"
-        "mist", "fog", "haze" -> " 🌫️"
-        else -> " 🌤️"
+        "clear" -> "☀"
+        "clouds" -> "☁️"
+        "rain" -> "🌧"
+        "drizzle" -> "🌦"
+        "thunderstorm" -> "⛈️"
+        "snow" -> "🌨"
+        "mist", "fog", "haze" -> "🌫"
+        else -> "🌤"
     }
 }
